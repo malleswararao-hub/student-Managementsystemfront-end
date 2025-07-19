@@ -1,0 +1,30 @@
+html,body{
+margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #05111d;
+  font-family: Arial, sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: aliceblue;
+}
+.button{
+    text-align: center;
+    height: 10vh;
+}
+.btn-danger{
+    margin-right: 230px;
+    min-width: 150px;
+}
+.table thead th {
+  background-color: #08223d;
+  color: white;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+  padding: 0.75rem;
+}
+

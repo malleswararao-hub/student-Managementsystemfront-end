@@ -1,35 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+
 <body>
 <div class="wrapper">
   <form class="form">
     <div *ngIf="getfirstpage()">
-      <h2>Update Student - Student 1</h2>
+      <h2>Register Student</h2>
+      <input type="text" placeholder="id">
       <input type="text" placeholder="Age" />
       <input type="text" placeholder="Gender" />
       <input type="email" placeholder="email" />
       <input type="number" placeholder="Mobile Number" />
       <textarea placeholder="Adress" rows="3"></textarea>
-      <button type="submit" routerLink="/updatefinal">Next</button>
+      <button type="submit" routerLink="/final">Next</button>
     </div>
     <div *ngIf="getfinal()">
-    <h2>Update Student - Student 1</h2>
+    <h2>Register Student</h2>
     <input type="text" placeholder="course" />
     <input type="text" placeholder="Department" />
     <input type="text" placeholder="Year of study" />
     <input type="text" placeholder="rollno" />
-    <label>Date</label>
+    <label>Admission Date</label>
     <input type="date" placeholder="Year"/>
-    <button type="submit"  routerLink="/up1">Back</button>
-    <button type="submit">Update</button>
+    <button type="submit"  routerLink="/register">Back</button>
+    <button type="submit" routerLink="">Update</button>
     </div>
   </form>
 </div>
 
 </body>
-</html>
