@@ -1,7 +1,6 @@
 <body>
-<h1>Student Management System</h1>
-<div>
-    <table class="table">
+<div class="table-container">
+  <table class="table">
   <thead>
     <tr>
       <th scope="col">id</th>
@@ -21,7 +20,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let student of Students">
-      <th scope="row">{{student.id}}</th>
+      <td>{{student.id}}</td>
       <td>{{student.studentName}}</td>
       <td>{{student.age}}</td>
       <td>{{student.gender}}</td>
