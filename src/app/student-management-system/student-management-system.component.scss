@@ -4,6 +4,7 @@ margin: 0;
   height: 100%;
   background-color: #05111d;
   font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 
 h1{
@@ -21,14 +22,35 @@ h1{
 .table thead th {
   background-color: #08223d;
   color: white;
+  position:sticky;
+   top: 0;
 }
 
 .table td, .table th {
   vertical-align: middle;
   padding: 0.75rem;
+
+}
+tbody{
+ 
+  max-height: 70vh;
+  
 }
 img{
   max-width: 30px;
   max-height: 40px;
 }
+.table-container{
+  display: flex;
+  max-height: 700px;
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
 
