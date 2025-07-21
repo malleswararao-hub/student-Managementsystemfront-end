@@ -1,7 +1,12 @@
 <body>
+
 <header><h4>Student Management System</h4></header>
 <div>
     <table class="table">
+
+<div class="table-container">
+  <table class="table">
+
   <thead>
     <tr>
       <th scope="col">id</th>
@@ -16,11 +21,12 @@
       <th scope="col">Year Of Study</th>
       <th scope="col">Roll No</th>
       <th scope="col">Admission Date</th>
+      <th scope="col">Update</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let student of Students">
-      <th scope="row">{{student.id}}</th>
+      <td>{{student.id}}</td>
       <td>{{student.studentName}}</td>
       <td>{{student.age}}</td>
       <td>{{student.gender}}</td>
@@ -32,13 +38,9 @@
       <td>{{student.yearOfStudy}}</td>
        <td>{{student.rollNumber}}</td>
       <td>{{student.admissionDate}}</td>
+      <td ><img src="https://media.gettyimages.com/id/2164314949/vector/edit-glyph-solid-icon-solid-icon-that-can-be-applied-anywhere-simple-pixel-perfect-and.jpg?s=612x612&w=0&k=20&c=8Rr_LfHiVSYnp694oxQKaTLP0Kqrm81ZkzodyBjLKTg=" routerLink="/up1"></td>
     </tr>
     </tbody>
     </table>
-</div>
-<div class="button">
-  <button routerLink="/up1" class="btn btn-danger">Update</button>
-  <button routerLink="/register" class="btn btn-danger">Register</button>
-
 </div>
 </body>
