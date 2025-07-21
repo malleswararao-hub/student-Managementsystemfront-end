@@ -14,6 +14,7 @@ export class StudentManagementSystemComponent implements OnInit {
   ngOnInit(): void {
    this.getAllStudents();
   }
+  a=0;
 
   getAllStudents(){
     this.student.getAllStudents().subscribe(

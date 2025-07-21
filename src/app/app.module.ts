@@ -7,6 +7,7 @@ import { StudentManagementSystemComponent } from './student-management-system/st
 import {HttpClientModule} from '@angular/common/http';
 import { UpdateComponent } from './update/update.component';
 import { RegisterComponent } from './register/register.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { RegisterComponent } from './register/register.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
