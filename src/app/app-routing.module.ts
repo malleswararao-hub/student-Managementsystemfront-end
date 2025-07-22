@@ -12,8 +12,8 @@ const routes: Routes = [
   {path:'student',component:StudentManagementSystemComponent},
   {path:'register',component:RegisterComponent},
   {path:'final',component:RegisterComponent},
-  {path:'',component:AppComponent},
-  {path:'home',component:HomeComponent}
+  //{path:'',component:AppComponent},
+  {path:'',component:HomeComponent}
 ];
 
 @NgModule({
