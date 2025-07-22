@@ -10,7 +10,7 @@ export class NavbarComponent {
 
    constructor(private router: Router){}
   openHome(){
-    this.router.navigate(['home'])
+    this.router.navigate([''])
   }
   openstudent(){
     this.router.navigate(['student'])
