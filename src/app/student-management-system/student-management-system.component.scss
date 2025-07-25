@@ -1,22 +1,29 @@
 .page-center {
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   align-items: center;
   height: 100vh;
   background-color: #f5f7fa;
   padding: 20px;
+  padding-left: 200px; 
   box-sizing: border-box;
+  overflow-x: auto;
 }
 
 .table-container {
   max-height: 80vh;
-  max-width: 190vh;
+  width: 100%;
   overflow: auto;
   border-radius: 8px;
   background-color: #fff;
 }
 
 
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 920px; 
+}
 
 .student-table th,
 .student-table td {
@@ -39,7 +46,8 @@
   background-color: #f2f2f2;
 }
 
-.student-table img {
+.student-table img,
+.student-table button {
   padding: 6px 12px;
   color: white;
   border: none;
@@ -50,6 +58,8 @@
 .student-table button:hover {
   background-color: #c82333;
 }
+
+/* Student Details Popup */
 .student-details-card {
   position: fixed;
   top: 20%;
