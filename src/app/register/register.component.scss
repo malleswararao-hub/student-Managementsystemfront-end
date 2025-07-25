@@ -1,45 +1,40 @@
 .body {
-   place-items: center;
   padding-top: 60px;
-  background:white;
+  background: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
 
-.row{
-  margin-bottom: 30px;
-  margin-top: 10px;
-}
 .container {
- 
-  padding-top: 80px;
   max-width: 900px;
+  width: 90%;
   background: #f1eff4;
-  padding: 40px 60px;
+  padding: 40px 30px;
+  margin: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
+  overflow-y: auto;
 }
 
 h1 {
- 
   text-align: center;
   margin-bottom: 30px;
   font-weight: 600;
   color: #333;
 }
 
-label {
-  font-weight: 500;
-  margin-bottom: 6px;
+.row {
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
+/* Form Controls */
 input.form-control {
   height: 42px;
   font-size: 15px;
   border-radius: 8px;
   border: 1px solid #ccc;
   padding-left: 15px;
+  width: 100%;
 }
 
 input.form-control:focus {
@@ -48,19 +43,48 @@ input.form-control:focus {
   outline: none;
 }
 
+/* Submit Button */
 button.btn-info {
-  align-items:center;
   width: 90%;
+  max-width: 300px;
   height: 45px;
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1px;
   border-radius: 10px;
-  margin-top: 20px
+  margin: 20px auto 0;
+  display: block;
 }
 
 button.btn-info:hover {
   background-color: #138496;
 }
 
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
 
+  .form-group {
+    width: 100% !important;
+    margin-bottom: 15px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  input.form-control {
+    height: 38px;
+    font-size: 14px;
+  }
+
+  button.btn-info {
+    font-size: 15px;
+  }
+}
