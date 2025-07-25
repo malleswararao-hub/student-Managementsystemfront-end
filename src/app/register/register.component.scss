@@ -1,85 +1,66 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: #05111d;
-  font-family: Arial, sans-serif;
+.body {
+   place-items: center;
+  padding-top: 60px;
+  background:white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
-.wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.form {
-  min-width: 400px;
-  max-width: 500px;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.05);
-  padding: 2rem;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  color: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-
-.form h2 {
-  margin: 0 0 1rem 0;
-  text-align: center;
-  color: white;
-}
-
-.form input,
-.form textarea,
-.form button,
-.form label {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
+.row{
+  margin-bottom: 30px;
   margin-top: 10px;
 }
+.container {
+ 
+  padding-top: 80px;
+  max-width: 900px;
+  background: #f1eff4;
+  padding: 40px 60px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
-.form input,
-.form textarea {
-  padding: 0.5rem;
-  border: 1px solid #ffffff60;
-  background: transparent;
-  color: white;
-  border-radius: 5px;
+}
+
+h1 {
+ 
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #333;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+input.form-control {
+  height: 42px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+}
+
+input.form-control:focus {
+  border-color: #17a2b8;
+  box-shadow: 0 0 4px #17a2b8;
   outline: none;
-  text-align: center;
 }
 
-.form input::placeholder,
-.form textarea::placeholder {
-  color: #e0e0e0;
+button.btn-info {
+  align-items:center;
+  width: 90%;
+  height: 45px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  margin-top: 20px
 }
 
-.form button {
-  padding: 0.6rem;
-  background-color: white;
-  color: #007BFF;
-  border: none;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+button.btn-info:hover {
+  background-color: #138496;
 }
 
-.form button:hover {
-  background-color: #e0e0e0;
-}
 
-.form textarea {
-  resize: vertical;
-}
-
-.form label {
-  text-align: center;
-  font-weight: bold;
-  margin-top: 0.5rem;
-}

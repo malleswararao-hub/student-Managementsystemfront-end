@@ -1,45 +1,44 @@
-
-<div>
-    <table class="table">
-
-<div class="table-container">
-  <table class="table">
-
-  <thead>
-    <tr>
-      <th scope="col">id</th>
-      <th scope="col">Name</th>
-      <th scope="col">Age</th>
-      <th scope="col">Gender</th>
-      <th scope="col">Email</th>
-      <th scope="col">Contact</th>
-      <th scope="col">Adress</th>
-      <th scope="col">Course</th>
-      <th scope="col">Department</th>
-      <th scope="col">Year Of Study</th>
-      <th scope="col">Roll No</th>
-      <th scope="col">Admission Date</th>
-      <th scope="col">Update</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let student of Students">
-      <td>{{student.id}}</td>
-      <td>{{student.studentName}}</td>
-      <td>{{student.age}}</td>
-      <td>{{student.gender}}</td>
-       <td>{{student.email}}</td>
-      <td>{{student.contactNumber}}</td>
-      <td>{{student.address}}</td>
-       <td>{{student.course}}</td>
-      <td>{{student.department}}</td>
-      <td>{{student.yearOfStudy}}</td>
-       <td>{{student.rollNumber}}</td>
-      <td>{{student.admissionDate}}</td>
-      <td ><img src="https://media.gettyimages.com/id/2164314949/vector/edit-glyph-solid-icon-solid-icon-that-can-be-applied-anywhere-simple-pixel-perfect-and.jpg?s=612x612&w=0&k=20&c=8Rr_LfHiVSYnp694oxQKaTLP0Kqrm81ZkzodyBjLKTg=" routerLink="/up1"></td>
-    </tr>
-    </tbody>
+<div class="page-center">
+  <div class="table-container">
+    <table class="student-table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Course</th>
+          <th>Department</th>
+          <th>Year Of Study</th>
+          <th>Roll No</th>
+          <th>Admission Date</th>
+          <th>View</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of Students">
+          <td>{{student.id}}</td>
+          <td>{{student.studentName}}</td>
+          <td>{{student.email}}</td>
+          <td>{{student.course}}</td>
+          <td>{{student.department}}</td>
+          <td>{{student.yearOfStudy}}</td>
+          <td>{{student.rollNumber}}</td>
+          <td>{{student.admissionDate}}</td>
+          <td><img src="../../assets/eye-fill.svg" (click)="viewstudent(student)"></td>
+          <td><img src="../../assets/trash.svg" (click)="deleteStudent(student.id)">
+             <img src="../../assets/pencil-square.svg">
+          </td>
+        </tr>
+      </tbody>
     </table>
+  </div>
+  <div *ngIf="selectstudent" class="student-details-card">
+    <h4>Student {{selectstudent.id}} - Details</h4>
+    <p>Name:{{selectstudent.studentName}}</p>
+    <p>Age:{{selectstudent.age}}</p>
+    <p>Address:{{selectstudent.address}}</p>
+    <p>Contact:{{selectstudent.contactNumber}}</p>
+    <button (click)="closeview()" class="btn btn-info">close</button>
+  </div>
 </div>
-
-
