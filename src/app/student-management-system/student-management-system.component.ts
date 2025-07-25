@@ -9,7 +9,17 @@ import { Student } from '../student';
 })
 export class StudentManagementSystemComponent implements OnInit {
 
+  selectstudent:any=null
+  viewstudent(student:Student){
+    this.selectstudent=student
+
+  }
+  closeview(){
+    this.selectstudent=null;
+  }
+
   Students:Student[]=[]
+  message:String=''
   constructor(private student:StudentService){}
   ngOnInit(): void {
    this.getAllStudents();
@@ -26,6 +36,24 @@ export class StudentManagementSystemComponent implements OnInit {
         console.log("This was an error");
       }
     )
-
+    }
+  deleteStudent(id: number) {
+  if (confirm('Are you sure you want to delete this Student?')) {
+    this.student.deleteStudent(id).subscribe({
+      next: (message: string) => {
+        alert(message);  // Shows "Student deleted successfully"
+        this.getAllStudents(); // Refreshes the list
+      },
+      error: (err) => {
+        console.error('Delete failed', err);
+        alert('Error deleting student.');
+      }
+    });
   }
 }
+
+ 
+
+  
+}
+ 

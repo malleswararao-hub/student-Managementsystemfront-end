@@ -1,29 +1,50 @@
-
-<body>
-<div class="wrapper">
-  <form class="form">
-    <div *ngIf="getfirstpage()">
-      <h2>Register Student</h2>
-      <input type="text" placeholder="id">
-      <input type="text" placeholder="Age" />
-      <input type="text" placeholder="Gender" />
-      <input type="email" placeholder="email" />
-      <input type="number" placeholder="Mobile Number" />
-      <textarea placeholder="Adress" rows="3"></textarea>
-      <button type="submit" routerLink="/final">Next</button>
+<div class="body">
+  <div class="container">
+  <!-- Content here -->
+  <form (ngSubmit)="onSubmit()">
+    <h1>Register Student</h1>
+  <div class="row">
+    <div class="form-group col-md-6">
+      <input type="text" class="form-control" [(ngModel)]="student.studentName" name="studentname" placeholder="Name">
     </div>
-    <div *ngIf="getfinal()">
-    <h2>Register Student</h2>
-    <input type="text" placeholder="course" />
-    <input type="text" placeholder="Department" />
-    <input type="text" placeholder="Year of study" />
-    <input type="text" placeholder="rollno" />
-    <label>Admission Date</label>
-    <input type="date" placeholder="Year"/>
-    <button type="submit"  routerLink="/register">Back</button>
-    <button type="submit" routerLink="">Update</button>
+    <div class="form-group col-md-4">
+      <input type="text" class="form-control" [(ngModel)]="student.age" name="age" placeholder="Age">
     </div>
-  </form>
+  </div>
+  <div class="row">
+   <div class="form-group col-md-6">
+      <input type="email" class="form-control" [(ngModel)]="student.email" name="email" placeholder="Email">
+    </div>
+    <div class="form-group col-md-4">
+      <input type="text" class="form-control" [(ngModel)]="student.contactNumber" name="ContactNumber" placeholder="ContactNumber">
+    </div>
+    </div>
+  <div class="form-group col-md-10">
+    <input type="text" class="form-control" [(ngModel)]="student.address" name="address" placeholder="1234 Main St">
+  </div>
+  <div class="row">
+   <div class="form-group col-md-6">
+      <input type="text" class="form-control" [(ngModel)]="student.course" name="course" placeholder="Course">
+    </div>
+    <div class="form-group col-md-4">
+      <input type="text" class="form-control" [(ngModel)]="student.department" name="department" placeholder="Department">
+    </div>
+  </div>
+  <div class="row">
+   <div class="form-group col-md-4">
+      <input type="text" class="form-control"[(ngModel)]="student.yearOfStudy" name="yearOfStudy" placeholder="Yaer Of Study">
+    </div>
+    <div class="form-group col-md-2">
+      <input type="text" class="form-control" [(ngModel)]="student.rollNumber" name="rollNumber" placeholder="Rollno">
+    </div>
+    <div class="form-group col-md-4">
+      <input type="date" class="form-control" [(ngModel)]="student.admissionDate" name="admissionDate" placeholder="AdmissionDate">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-info">submit</button>
+</form>
+<div *ngIf="errorMessage" class="alert alert-danger mt-3">
+  {{ errorMessage }}
 </div>
-
-</body>
+</div>
+</div>

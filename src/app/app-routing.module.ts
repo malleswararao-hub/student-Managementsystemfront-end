@@ -4,6 +4,7 @@ import { UpdateComponent } from './update/update.component';
 import { StudentManagementSystemComponent } from './student-management-system/student-management-system.component';
 import { RegisterComponent } from './register/register.component';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {path:'up1',component:UpdateComponent},
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path:'student',component:StudentManagementSystemComponent},
   {path:'register',component:RegisterComponent},
   {path:'final',component:RegisterComponent},
-  {path:'',component:AppComponent}
+  //{path:'',component:AppComponent},
+  {path:'',component:HomeComponent}
 ];
 
 @NgModule({
