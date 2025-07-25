@@ -1,59 +1,64 @@
-html,body{
-margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: #05111d;
-  font-family: Arial, sans-serif;
-  overflow: hidden;
-}
-
-h4{
-    top:35px;
-    position:relative;
-    text-align: center;
-    color: aliceblue;
-}
-.button{
-    text-align: center;
-    height: 10vh;
-}
-.btn-danger{
-    margin-right: 230px;
-    min-width: 150px;
-}
-.table thead th {
-  background-color: #08223d;
-  color: white;
-  position:sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.table td, .table th {
-  vertical-align: middle;
-  padding: 0.75rem;
-
-}
-tbody{
- 
-  max-height: 70vh;
-  
-}
-img{
-  max-width: 30px;
-  max-height: 40px;
-}
-.table-container{
+.page-center {
   display: flex;
-  max-height: 700px;
+  justify-content: right;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f7fa;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.table-container {
+  max-height: 80vh;
+  max-width: 190vh;
+  overflow: auto;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+
+
+.student-table th,
+.student-table td {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.student-table thead th {
+  position: sticky;
+  top: 0;
+  overflow: visible;
+  background-color: #007bff;
+  color: white;
+  z-index: 2;
+}
+
+.student-table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+.student-table img {
+  padding: 6px 12px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.student-table button:hover {
+  background-color: #c82333;
+}
+.student-details-card {
   position: fixed;
-  overflow-y: auto;
-  overflow-x: auto;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  z-index: 1000;
 }
-.table {
-  width: 100%;
-  border-collapse: collapse;
-  
-}
-
-
