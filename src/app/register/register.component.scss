@@ -1,9 +1,10 @@
 .body {
-  padding-top: 60px;
+  padding-top: 60px; // top navbar space
   background: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Main Form Container */
 .container {
   max-width: 900px;
   width: 90%;
@@ -13,8 +14,14 @@
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
+
+  // ✅ Offset content due to fixed sidebar (180px) and navbar (60px)
+  margin-left: 180px;
+  margin-top: 60px;
+  min-height: calc(100vh - 60px); // full height below navbar
 }
 
+/* Heading */
 h1 {
   text-align: center;
   margin-bottom: 30px;
@@ -22,9 +29,13 @@ h1 {
   color: #333;
 }
 
+/* Spacing Rows */
 .row {
   margin-bottom: 20px;
   margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 /* Form Controls */
@@ -60,8 +71,15 @@ button.btn-info:hover {
   background-color: #138496;
 }
 
-/* Responsive Design */
+/* ✅ Responsive Fix for Small Screens */
 @media screen and (max-width: 768px) {
+  .container {
+    margin-left: 0;      // sidebar collapses on small screens
+    margin-top: 60px;
+    padding: 20px;
+    width: 95%;
+  }
+
   .row {
     flex-direction: column;
   }
@@ -69,10 +87,6 @@ button.btn-info:hover {
   .form-group {
     width: 100% !important;
     margin-bottom: 15px;
-  }
-
-  .container {
-    padding: 20px;
   }
 
   h1 {
