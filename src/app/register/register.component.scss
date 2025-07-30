@@ -1,104 +1,50 @@
 .body {
-  padding-top: 60px; // top navbar space
-  background: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+  margin-left: 180px; // same as your sidebar width
+  margin-top: 60px;   // same as your navbar height
+  padding: 20px;
 
-/* Main Form Container */
-.container {
-  max-width: 900px;
-  width: 90%;
-  background: #f1eff4;
-  padding: 40px 30px;
-  margin: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
-
-  // ✅ Offset content due to fixed sidebar (180px) and navbar (60px)
-  margin-left: 180px;
-  margin-top: 60px;
-  min-height: calc(100vh - 60px); // full height below navbar
-}
-
-/* Heading */
-h1 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: 600;
-  color: #333;
-}
-
-/* Spacing Rows */
-.row {
-  margin-bottom: 20px;
-  margin-top: 10px;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-/* Form Controls */
-input.form-control {
-  height: 42px;
-  font-size: 15px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  padding-left: 15px;
-  width: 100%;
-}
-
-input.form-control:focus {
-  border-color: #17a2b8;
-  box-shadow: 0 0 4px #17a2b8;
-  outline: none;
-}
-
-/* Submit Button */
-button.btn-info {
-  width: 90%;
-  max-width: 300px;
-  height: 45px;
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 1px;
-  border-radius: 10px;
-  margin: 20px auto 0;
-  display: block;
-}
-
-button.btn-info:hover {
-  background-color: #138496;
-}
-
-/* ✅ Responsive Fix for Small Screens */
-@media screen and (max-width: 768px) {
   .container {
-    margin-left: 0;      // sidebar collapses on small screens
-    margin-top: 60px;
+    max-width: 900px;
+    margin: 0 auto; // ✅ Center horizontally
     padding: 20px;
-    width: 95%;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      width: 100%;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    button[type="submit"] {
+      display: block;
+      margin: 20px auto 0 auto;
+    }
+  }
+}
+
+// Responsive layout: make form full width on small devices
+@media screen and (max-width: 768px) {
+  .body {
+    margin-left: 0;
+    padding: 10px;
+
+    .container {
+      max-width: 100%;
+    }
   }
 
-  .row {
-    flex-direction: column;
-  }
-
-  .form-group {
-    width: 100% !important;
-    margin-bottom: 15px;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  input.form-control {
-    height: 38px;
-    font-size: 14px;
-  }
-
-  button.btn-info {
-    font-size: 15px;
+  #sidebar {
+    position: relative; // Or hide it completely on small screens
+    width: 100%;
+    height: auto;
   }
 }
