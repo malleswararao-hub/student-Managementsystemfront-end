@@ -8,7 +8,7 @@ import { Student } from '../student';
   styleUrls: ['./student-management-system.component.scss']
 })
 export class StudentManagementSystemComponent implements OnInit {
-
+  searchstudent:number=0;
   selectstudent:any=null
   viewstudent(student:Student){
     this.selectstudent=student
@@ -19,6 +19,7 @@ export class StudentManagementSystemComponent implements OnInit {
   }
 
   Students:Student[]=[]
+  getstudent:Student=new Student();
   message:String=''
   constructor(private student:StudentService){}
   ngOnInit(): void {
@@ -50,7 +51,20 @@ export class StudentManagementSystemComponent implements OnInit {
       }
     });
   }
+
 }
+searcstudent(){
+this.student.getstudentsbyid(this.searchstudent).subscribe({
+  next: (data) => {
+    this.getstudent = data;
+  },
+  error: (err) => {
+    this.searchstudent = 0;
+    this.message = "Student not found!";
+  }
+});
+}
+
 
  
 

@@ -19,15 +19,14 @@ export class StudentService {
   poststudents(student:Student):Observable<Student>{
     return this.http.post<Student>(`${this.baseurl}/addstudent`,student)
   }
-
-  
-
-
 deleteStudent(id: number): Observable<string> {
   return this.http.delete(`${this.baseurl}/deletestudent?id=${id}`, { responseType: 'text'}
    
   ) ;
 }
+  getstudentsbyid(id:number):Observable<Student>{
+    return this.http.get<Student>(`${this.baseurl}/getstudent?id=${id}`,)
+  }
 
   
 
